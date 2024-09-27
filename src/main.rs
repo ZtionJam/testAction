@@ -59,7 +59,7 @@ fn read_last_n_lines(path: &str, n: usize) -> std::io::Result<String> {
         }
     }
 
-    // 如果找到了足够的行数，从找到的位置读取数据
+    // 如果找到了足够的行数，从找到的位置读取数据xxx
     if lines_found > 0 {
         file.seek(SeekFrom::End(-(pos as i64)))?;
         file.read_to_end(&mut buffer)?;

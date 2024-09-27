@@ -1,0 +1,427 @@
+2024-09-09 17:59:47 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-09-09 17:59:47 [main] INFO  org.dromara.DromaraApplication - Starting DromaraApplication using Java 17.0.12 with PID 16708 (D:\tmp\Mission\Project\Service\mission-admin.jar started by ztion in D:\tmp\Mission\Project\Service)
+2024-09-09 17:59:47 [main] INFO  org.dromara.DromaraApplication - The following 1 profile is active: "dev"
+2024-09-09 17:59:55 [main] INFO  io.undertow.servlet - Initializing Spring embedded WebApplicationContext
+2024-09-09 17:59:55 [main] INFO  c.b.d.d.DynamicRoutingDataSource - dynamic-datasource detect P6SPY plugin and enabled it
+2024-09-09 17:59:55 [main] INFO  com.zaxxer.hikari.HikariDataSource - master - Starting...
+2024-09-09 17:59:56 [main] INFO  com.zaxxer.hikari.pool.HikariPool - master - Added connection com.mysql.cj.jdbc.ConnectionImpl@7e092ca
+2024-09-09 17:59:56 [main] INFO  com.zaxxer.hikari.HikariDataSource - master - Start completed.
+2024-09-09 17:59:56 [main] INFO  c.b.d.d.DynamicRoutingDataSource - dynamic-datasource - add a datasource named [face] success
+2024-09-09 17:59:56 [main] INFO  c.b.d.d.DynamicRoutingDataSource - dynamic-datasource - add a datasource named [master] success
+2024-09-09 17:59:56 [main] INFO  c.b.d.d.DynamicRoutingDataSource - dynamic-datasource initial loaded [2] datasource,primary datasource named [master]
+2024-09-09 17:59:59 [main] INFO  o.d.common.redis.config.RedisConfig - 初始化 redis 配置
+2024-09-09 17:59:59 [main] INFO  org.redisson.Version - Redisson 3.31.0
+2024-09-09 18:00:00 [redisson-netty-1-1] INFO  o.r.connection.ConnectionsHolder - 1 connections initialized for cdwsxtest.cdwsx.cn/8.137.54.27:5379
+2024-09-09 18:00:00 [redisson-netty-1-4] INFO  o.r.connection.ConnectionsHolder - 8 connections initialized for cdwsxtest.cdwsx.cn/8.137.54.27:5379
+2024-09-09 18:00:01 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'face' defined in URL [jar:nested:/D:/tmp/Mission/Project/Service/mission-admin.jar/!BOOT-INF/lib/mission-face-5.2.1.jar!/com/jni/face/Face.class]: Failed to instantiate [com.jni.face.Face]: Constructor threw exception
+2024-09-09 18:00:03 [main] INFO  o.d.c.core.config.ThreadPoolConfig - ====关闭后台任务任务线程池====
+2024-09-09 18:00:03 [main] INFO  c.b.d.d.DynamicRoutingDataSource - dynamic-datasource start closing ....
+2024-09-09 18:00:03 [main] INFO  c.b.d.d.d.DefaultDataSourceDestroyer - dynamic-datasource close the datasource named [face] success,
+2024-09-09 18:00:03 [main] INFO  com.zaxxer.hikari.HikariDataSource - master - Shutdown initiated...
+2024-09-09 18:00:03 [main] INFO  com.zaxxer.hikari.HikariDataSource - master - Shutdown completed.
+2024-09-09 18:00:03 [main] INFO  c.b.d.d.d.DefaultDataSourceDestroyer - dynamic-datasource close the datasource named [master] success,
+2024-09-09 18:00:03 [main] INFO  c.b.d.d.DynamicRoutingDataSource - dynamic-datasource all closed success,bye
+2024-09-09 18:00:03 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'face' defined in URL [jar:nested:/D:/tmp/Mission/Project/Service/mission-admin.jar/!BOOT-INF/lib/mission-face-5.2.1.jar!/com/jni/face/Face.class]: Failed to instantiate [com.jni.face.Face]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:318)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:306)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1357)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1194)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:962)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.dromara.DromaraApplication.main(DromaraApplication.java:19)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:91)
+	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:53)
+	at org.springframework.boot.loader.launch.JarLauncher.main(JarLauncher.java:58)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.jni.face.Face]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:221)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:111)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:315)
+	... 24 common frames omitted
+Caused by: java.lang.UnsatisfiedLinkError: Can't load library: D:\tmp\Mission\Project\ServiceBaiduFaceApi.dll
+	at java.base/java.lang.ClassLoader.loadLibrary(ClassLoader.java:2398)
+	at java.base/java.lang.Runtime.load0(Runtime.java:755)
+	at java.base/java.lang.System.load(System.java:1957)
+	at com.jni.face.Face.<init>(Face.java:190)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:208)
+	... 26 common frames omitted
+2024-09-09 18:00:43 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-09-09 18:00:43 [main] INFO  org.dromara.DromaraApplication - Starting DromaraApplication using Java 17.0.12 with PID 15496 (D:\tmp\Mission\Project\Service\mission-admin.jar started by ztion in D:\tmp\Mission\Project\Service)
+2024-09-09 18:00:43 [main] INFO  org.dromara.DromaraApplication - The following 1 profile is active: "dev"
+2024-09-09 18:00:49 [main] INFO  io.undertow.servlet - Initializing Spring embedded WebApplicationContext
+2024-09-09 18:00:50 [main] INFO  c.b.d.d.DynamicRoutingDataSource - dynamic-datasource detect P6SPY plugin and enabled it
+2024-09-09 18:00:50 [main] INFO  com.zaxxer.hikari.HikariDataSource - master - Starting...
+2024-09-09 18:00:51 [main] INFO  com.zaxxer.hikari.pool.HikariPool - master - Added connection com.mysql.cj.jdbc.ConnectionImpl@542b27af
+2024-09-09 18:00:51 [main] INFO  com.zaxxer.hikari.HikariDataSource - master - Start completed.
+2024-09-09 18:00:51 [main] INFO  c.b.d.d.DynamicRoutingDataSource - dynamic-datasource - add a datasource named [face] success
+2024-09-09 18:00:51 [main] INFO  c.b.d.d.DynamicRoutingDataSource - dynamic-datasource - add a datasource named [master] success
+2024-09-09 18:00:51 [main] INFO  c.b.d.d.DynamicRoutingDataSource - dynamic-datasource initial loaded [2] datasource,primary datasource named [master]
+2024-09-09 18:00:54 [main] INFO  o.d.common.redis.config.RedisConfig - 初始化 redis 配置
+2024-09-09 18:00:54 [main] INFO  org.redisson.Version - Redisson 3.31.0
+2024-09-09 18:00:54 [redisson-netty-1-1] INFO  o.r.connection.ConnectionsHolder - 1 connections initialized for cdwsxtest.cdwsx.cn/8.137.54.27:5379
+2024-09-09 18:00:54 [redisson-netty-1-4] INFO  o.r.connection.ConnectionsHolder - 8 connections initialized for cdwsxtest.cdwsx.cn/8.137.54.27:5379
+2024-09-09 18:00:55 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'face' defined in URL [jar:nested:/D:/tmp/Mission/Project/Service/mission-admin.jar/!BOOT-INF/lib/mission-face-5.2.1.jar!/com/jni/face/Face.class]: Failed to instantiate [com.jni.face.Face]: Constructor threw exception
+2024-09-09 18:00:57 [main] INFO  o.d.c.core.config.ThreadPoolConfig - ====关闭后台任务任务线程池====
+2024-09-09 18:00:57 [main] INFO  c.b.d.d.DynamicRoutingDataSource - dynamic-datasource start closing ....
+2024-09-09 18:00:57 [main] INFO  c.b.d.d.d.DefaultDataSourceDestroyer - dynamic-datasource close the datasource named [face] success,
+2024-09-09 18:00:57 [main] INFO  com.zaxxer.hikari.HikariDataSource - master - Shutdown initiated...
+2024-09-09 18:00:57 [main] INFO  com.zaxxer.hikari.HikariDataSource - master - Shutdown completed.
+2024-09-09 18:00:57 [main] INFO  c.b.d.d.d.DefaultDataSourceDestroyer - dynamic-datasource close the datasource named [master] success,
+2024-09-09 18:00:57 [main] INFO  c.b.d.d.DynamicRoutingDataSource - dynamic-datasource all closed success,bye
+2024-09-09 18:00:58 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'face' defined in URL [jar:nested:/D:/tmp/Mission/Project/Service/mission-admin.jar/!BOOT-INF/lib/mission-face-5.2.1.jar!/com/jni/face/Face.class]: Failed to instantiate [com.jni.face.Face]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:318)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:306)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1357)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1194)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:962)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.dromara.DromaraApplication.main(DromaraApplication.java:19)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:91)
+	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:53)
+	at org.springframework.boot.loader.launch.JarLauncher.main(JarLauncher.java:58)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.jni.face.Face]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:221)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:111)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:315)
+	... 24 common frames omitted
+Caused by: java.lang.UnsatisfiedLinkError: Can't load library: D:\tmp\Mission\Project\Service\BaiduFaceApi.dll
+	at java.base/java.lang.ClassLoader.loadLibrary(ClassLoader.java:2398)
+	at java.base/java.lang.Runtime.load0(Runtime.java:755)
+	at java.base/java.lang.System.load(System.java:1957)
+	at com.jni.face.Face.<init>(Face.java:190)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:208)
+	... 26 common frames omitted
+2024-09-09 18:01:58 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-09-09 18:01:58 [main] INFO  org.dromara.DromaraApplication - Starting DromaraApplication using Java 17.0.12 with PID 13420 (D:\tmp\Mission\Project\Service\mission-admin.jar started by ztion in D:\tmp\Mission\Project\Service)
+2024-09-09 18:01:58 [main] INFO  org.dromara.DromaraApplication - The following 1 profile is active: "dev"
+2024-09-09 18:02:05 [main] INFO  io.undertow.servlet - Initializing Spring embedded WebApplicationContext
+2024-09-09 18:02:06 [main] INFO  c.b.d.d.DynamicRoutingDataSource - dynamic-datasource detect P6SPY plugin and enabled it
+2024-09-09 18:02:06 [main] INFO  com.zaxxer.hikari.HikariDataSource - master - Starting...
+2024-09-09 18:02:06 [main] INFO  com.zaxxer.hikari.pool.HikariPool - master - Added connection com.mysql.cj.jdbc.ConnectionImpl@6bbff652
+2024-09-09 18:02:06 [main] INFO  com.zaxxer.hikari.HikariDataSource - master - Start completed.
+2024-09-09 18:02:06 [main] INFO  c.b.d.d.DynamicRoutingDataSource - dynamic-datasource - add a datasource named [face] success
+2024-09-09 18:02:06 [main] INFO  c.b.d.d.DynamicRoutingDataSource - dynamic-datasource - add a datasource named [master] success
+2024-09-09 18:02:06 [main] INFO  c.b.d.d.DynamicRoutingDataSource - dynamic-datasource initial loaded [2] datasource,primary datasource named [master]
+2024-09-09 18:02:09 [main] INFO  o.d.common.redis.config.RedisConfig - 初始化 redis 配置
+2024-09-09 18:02:09 [main] INFO  org.redisson.Version - Redisson 3.31.0
+2024-09-09 18:02:10 [redisson-netty-1-1] INFO  o.r.connection.ConnectionsHolder - 1 connections initialized for cdwsxtest.cdwsx.cn/8.137.54.27:5379
+2024-09-09 18:02:10 [redisson-netty-1-4] INFO  o.r.connection.ConnectionsHolder - 8 connections initialized for cdwsxtest.cdwsx.cn/8.137.54.27:5379
+2024-09-09 18:02:11 [main] INFO  com.jni.face.Face - 初始化SDK路径:D:\\tmp\\Mission\\Project\\Service\\face_sdk\\
+2024-09-09 18:02:13 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'face': Invocation of init method failed
+2024-09-09 18:02:15 [main] INFO  o.d.c.core.config.ThreadPoolConfig - ====关闭后台任务任务线程池====
+2024-09-09 18:02:15 [main] INFO  c.b.d.d.DynamicRoutingDataSource - dynamic-datasource start closing ....
+2024-09-09 18:02:15 [main] INFO  c.b.d.d.d.DefaultDataSourceDestroyer - dynamic-datasource close the datasource named [face] success,
+2024-09-09 18:02:15 [main] INFO  com.zaxxer.hikari.HikariDataSource - master - Shutdown initiated...
+2024-09-09 18:02:15 [main] INFO  com.zaxxer.hikari.HikariDataSource - master - Shutdown completed.
+2024-09-09 18:02:15 [main] INFO  c.b.d.d.d.DefaultDataSourceDestroyer - dynamic-datasource close the datasource named [master] success,
+2024-09-09 18:02:15 [main] INFO  c.b.d.d.DynamicRoutingDataSource - dynamic-datasource all closed success,bye
+2024-09-09 18:02:15 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'face': Invocation of init method failed
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1780)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:962)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.dromara.DromaraApplication.main(DromaraApplication.java:19)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:91)
+	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:53)
+	at org.springframework.boot.loader.launch.JarLauncher.main(JarLauncher.java:58)
+Caused by: java.lang.RuntimeException: 人脸SDK初始化失败，错误码 = -1019 
+	at com.jni.face.Face.init(Face.java:203)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:401)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:219)
+	... 23 common frames omitted
+2024-09-09 18:03:26 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-09-09 18:03:26 [main] INFO  org.dromara.DromaraApplication - Starting DromaraApplication using Java 17.0.12 with PID 9812 (D:\tmp\Mission\Project\Service\mission-admin.jar started by ztion in D:\tmp\Mission\Project\Service)
+2024-09-09 18:03:26 [main] INFO  org.dromara.DromaraApplication - The following 1 profile is active: "dev"
+2024-09-09 18:03:32 [main] INFO  io.undertow.servlet - Initializing Spring embedded WebApplicationContext
+2024-09-09 18:03:33 [main] INFO  c.b.d.d.DynamicRoutingDataSource - dynamic-datasource detect P6SPY plugin and enabled it
+2024-09-09 18:03:33 [main] INFO  com.zaxxer.hikari.HikariDataSource - master - Starting...
+2024-09-09 18:03:34 [main] INFO  com.zaxxer.hikari.pool.HikariPool - master - Added connection com.mysql.cj.jdbc.ConnectionImpl@51f31fad
+2024-09-09 18:03:34 [main] INFO  com.zaxxer.hikari.HikariDataSource - master - Start completed.
+2024-09-09 18:03:34 [main] INFO  c.b.d.d.DynamicRoutingDataSource - dynamic-datasource - add a datasource named [face] success
+2024-09-09 18:03:34 [main] INFO  c.b.d.d.DynamicRoutingDataSource - dynamic-datasource - add a datasource named [master] success
+2024-09-09 18:03:34 [main] INFO  c.b.d.d.DynamicRoutingDataSource - dynamic-datasource initial loaded [2] datasource,primary datasource named [master]
+2024-09-09 18:03:37 [main] INFO  o.d.common.redis.config.RedisConfig - 初始化 redis 配置
+2024-09-09 18:03:37 [main] INFO  org.redisson.Version - Redisson 3.31.0
+2024-09-09 18:03:37 [redisson-netty-1-8] INFO  o.r.connection.ConnectionsHolder - 1 connections initialized for cdwsxtest.cdwsx.cn/8.137.54.27:5379
+2024-09-09 18:03:37 [redisson-netty-1-4] INFO  o.r.connection.ConnectionsHolder - 8 connections initialized for cdwsxtest.cdwsx.cn/8.137.54.27:5379
+2024-09-09 18:03:39 [main] INFO  com.jni.face.Face - 初始化SDK路径:D:\\tmp\\Mission\\Project\\Service\\face_sdk\\
+2024-09-09 18:03:47 [main] INFO  com.jni.face.Face - 人脸SDK初始化完成，设备ID：BF1651AF1A9D922CFB6177694A432129，SDK版本：8.4.0
+2024-09-09 18:03:48 [main] INFO  o.d.common.json.config.JacksonConfig - 初始化 jackson 配置
+2024-09-09 18:03:50 [main] INFO  io.undertow - starting server: Undertow - 2.3.13.Final
+2024-09-09 18:03:50 [main] INFO  org.xnio - XNIO version 3.8.8.Final
+2024-09-09 18:03:50 [main] INFO  org.xnio.nio - XNIO NIO Implementation Version 3.8.8.Final
+2024-09-09 18:03:50 [main] INFO  org.jboss.threads - JBoss Threads version 3.5.0.Final
+2024-09-09 18:03:50 [main] INFO  io.undertow - stopping server: Undertow - 2.3.13.Final
+2024-09-09 18:03:50 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2024-09-09 18:03:51 [main] INFO  com.jni.face.Face - 离线SDK销毁
+2024-09-09 18:03:53 [main] INFO  o.d.c.core.config.ThreadPoolConfig - ====关闭后台任务任务线程池====
+2024-09-09 18:03:53 [main] INFO  c.b.d.d.DynamicRoutingDataSource - dynamic-datasource start closing ....
+2024-09-09 18:03:53 [main] INFO  c.b.d.d.d.DefaultDataSourceDestroyer - dynamic-datasource close the datasource named [face] success,
+2024-09-09 18:03:53 [main] INFO  com.zaxxer.hikari.HikariDataSource - master - Shutdown initiated...
+2024-09-09 18:03:53 [main] INFO  com.zaxxer.hikari.HikariDataSource - master - Shutdown completed.
+2024-09-09 18:03:53 [main] INFO  c.b.d.d.d.DefaultDataSourceDestroyer - dynamic-datasource close the datasource named [master] success,
+2024-09-09 18:03:53 [main] INFO  c.b.d.d.DynamicRoutingDataSource - dynamic-datasource all closed success,bye
+2024-09-09 18:03:53 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2024-09-09 18:04:24 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-09-09 18:04:24 [main] INFO  org.dromara.DromaraApplication - Starting DromaraApplication using Java 17.0.12 with PID 11348 (D:\tmp\Mission\Project\Service\mission-admin.jar started by ztion in D:\tmp\Mission\Project\Service)
+2024-09-09 18:04:24 [main] INFO  org.dromara.DromaraApplication - The following 1 profile is active: "dev"
+2024-09-09 18:04:29 [main] INFO  io.undertow.servlet - Initializing Spring embedded WebApplicationContext
+2024-09-09 18:04:29 [main] INFO  c.b.d.d.DynamicRoutingDataSource - dynamic-datasource detect P6SPY plugin and enabled it
+2024-09-09 18:04:29 [main] INFO  com.zaxxer.hikari.HikariDataSource - master - Starting...
+2024-09-09 18:04:30 [main] INFO  com.zaxxer.hikari.pool.HikariPool - master - Added connection com.mysql.cj.jdbc.ConnectionImpl@668ea404
+2024-09-09 18:04:30 [main] INFO  com.zaxxer.hikari.HikariDataSource - master - Start completed.
+2024-09-09 18:04:30 [main] INFO  c.b.d.d.DynamicRoutingDataSource - dynamic-datasource - add a datasource named [face] success
+2024-09-09 18:04:30 [main] INFO  c.b.d.d.DynamicRoutingDataSource - dynamic-datasource - add a datasource named [master] success
+2024-09-09 18:04:30 [main] INFO  c.b.d.d.DynamicRoutingDataSource - dynamic-datasource initial loaded [2] datasource,primary datasource named [master]
+2024-09-09 18:04:33 [main] INFO  o.d.common.redis.config.RedisConfig - 初始化 redis 配置
+2024-09-09 18:04:33 [main] INFO  org.redisson.Version - Redisson 3.31.0
+2024-09-09 18:04:33 [redisson-netty-1-8] INFO  o.r.connection.ConnectionsHolder - 1 connections initialized for cdwsxtest.cdwsx.cn/8.137.54.27:5379
+2024-09-09 18:04:33 [redisson-netty-1-4] INFO  o.r.connection.ConnectionsHolder - 8 connections initialized for cdwsxtest.cdwsx.cn/8.137.54.27:5379
+2024-09-09 18:04:34 [main] INFO  com.jni.face.Face - 初始化SDK路径:D:\\tmp\\Mission\\Project\\Service\\face_sdk\\
+2024-09-09 18:04:42 [main] INFO  com.jni.face.Face - 人脸SDK初始化完成，设备ID：BF1651AF1A9D922CFB6177694A432129，SDK版本：8.4.0
+2024-09-09 18:04:43 [main] INFO  o.d.common.json.config.JacksonConfig - 初始化 jackson 配置
+2024-09-09 18:04:45 [main] INFO  io.undertow - starting server: Undertow - 2.3.13.Final
+2024-09-09 18:04:45 [main] INFO  org.xnio - XNIO version 3.8.8.Final
+2024-09-09 18:04:45 [main] INFO  org.xnio.nio - XNIO NIO Implementation Version 3.8.8.Final
+2024-09-09 18:04:45 [main] INFO  org.jboss.threads - JBoss Threads version 3.5.0.Final
+2024-09-09 18:04:45 [main] INFO  org.dromara.DromaraApplication - Started DromaraApplication in 22.927 seconds (process running for 25.026)
+2024-09-09 18:04:45 [main] INFO  o.d.c.w.l.WebSocketTopicListener - 初始化WebSocket主题订阅监听器成功
+2024-09-09 18:04:46 [main] INFO  o.d.s.runner.SystemApplicationRunner - 初始化OSS配置成功
+2024-09-09 18:06:18 [XNIO-1 task-2] INFO  io.undertow.servlet - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-09 18:06:18 [XNIO-1 task-2] INFO  o.d.c.w.i.PlusWebInvokeTimeInterceptor - [PLUS]开始请求 => URL[GET /],无参数
+2024-09-09 18:06:18 [XNIO-1 task-2] INFO  o.d.c.w.i.PlusWebInvokeTimeInterceptor - [PLUS]结束请求 => URL[GET /],耗时:[30]毫秒
+2024-09-09 18:16:41 [XNIO-1 task-2] INFO  o.d.c.w.i.PlusWebInvokeTimeInterceptor - [PLUS]开始请求 => URL[GET /auth/code],无参数
+2024-09-09 18:16:41 [XNIO-1 task-3] INFO  o.d.c.w.i.PlusWebInvokeTimeInterceptor - [PLUS]开始请求 => URL[GET /auth/tenant/list],无参数
+2024-09-09 18:16:41 [XNIO-1 task-2] INFO  o.d.c.r.aspectj.RateLimiterAspect - 限制令牌 => 10, 剩余令牌 => 9, 缓存key => 'global:rate_limit:/auth/code:192.168.66.44:'
+2024-09-09 18:16:42 [XNIO-1 task-2] INFO  o.d.c.w.i.PlusWebInvokeTimeInterceptor - [PLUS]结束请求 => URL[GET /auth/code],耗时:[221]毫秒
+2024-09-09 18:16:42 [XNIO-1 task-3] INFO  o.d.c.w.i.PlusWebInvokeTimeInterceptor - [PLUS]结束请求 => URL[GET /auth/tenant/list],耗时:[219]毫秒
+2024-09-09 18:16:42 [XNIO-1 task-3] INFO  o.d.c.w.i.PlusWebInvokeTimeInterceptor - [PLUS]开始请求 => URL[GET /auth/code],无参数
+2024-09-09 18:16:42 [XNIO-1 task-2] INFO  o.d.c.w.i.PlusWebInvokeTimeInterceptor - [PLUS]开始请求 => URL[GET /auth/tenant/list],无参数
+2024-09-09 18:16:42 [XNIO-1 task-2] INFO  o.d.c.w.i.PlusWebInvokeTimeInterceptor - [PLUS]结束请求 => URL[GET /auth/tenant/list],耗时:[2]毫秒
+2024-09-09 18:16:42 [XNIO-1 task-3] INFO  o.d.c.r.aspectj.RateLimiterAspect - 限制令牌 => 10, 剩余令牌 => 8, 缓存key => 'global:rate_limit:/auth/code:192.168.66.44:'
+2024-09-09 18:16:42 [XNIO-1 task-3] INFO  o.d.c.w.i.PlusWebInvokeTimeInterceptor - [PLUS]结束请求 => URL[GET /auth/code],耗时:[22]毫秒
+2024-09-09 18:16:45 [XNIO-1 task-3] INFO  o.d.c.w.i.PlusWebInvokeTimeInterceptor - [PLUS]开始请求 => URL[POST /auth/login],参数类型[json],参数:[{"tenantId":"000000","username":"admin","password":"admin123","rememberMe":false,"clientId":"e5cd7e4891bf95d1d19206ce24a7b32e","grantType":"password"}]
+2024-09-09 18:16:45 [schedule-pool-1] INFO  o.d.s.s.i.SysLogininforServiceImpl - [192.168.66.44]内网IP[admin][Success][登录成功]
+2024-09-09 18:16:46 [XNIO-1 task-3] INFO  o.d.web.listener.UserActionListener - user doLogin, userId:sys_user:1, token:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpblR5cGUiOiJsb2dpbiIsImxvZ2luSWQiOiJzeXNfdXNlcjoxIiwicm5TdHIiOiJTdm5LZjlvekpwYWRxZHpTNlNSZkpTbHRwOG92TlJrRCIsImNsaWVudGlkIjoiZTVjZDdlNDg5MWJmOTVkMWQxOTIwNmNlMjRhN2IzMmUiLCJ0ZW5hbnRJZCI6IjAwMDAwMCIsInVzZXJJZCI6MSwidXNlck5hbWUiOiJhZG1pbiIsImRlcHRJZCI6MTAwLCJkZXB0TmFtZSI6IlhYWOenkeaKgCJ9.WWvz2_bct56OXTY6ybch2EzyOradDK3x3Cra0vhJJqc
+2024-09-09 18:16:46 [XNIO-1 task-3] INFO  o.d.web.listener.UserActionListener - user doLogout, userId:sys_user:1, token:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpblR5cGUiOiJsb2dpbiIsImxvZ2luSWQiOiJzeXNfdXNlcjoxIiwicm5TdHIiOiJBaU1UeTl5Y3R1WlAzc1Q2VjZzeUVJbWJGczJGeXk5SyIsImNsaWVudGlkIjoiZTVjZDdlNDg5MWJmOTVkMWQxOTIwNmNlMjRhN2IzMmUiLCJ0ZW5hbnRJZCI6IjAwMDAwMCIsInVzZXJJZCI6MSwidXNlck5hbWUiOiJhZG1pbiIsImRlcHRJZCI6MTAwLCJkZXB0TmFtZSI6IlhYWOenkeaKgCJ9.0afoTPyYcT09m594N6t3K730MPRlw3lefxbBHfNlXiE
+2024-09-09 18:16:46 [XNIO-1 task-3] INFO  o.d.c.w.i.PlusWebInvokeTimeInterceptor - [PLUS]结束请求 => URL[POST /auth/login],耗时:[859]毫秒
+2024-09-09 18:16:46 [XNIO-1 task-3] INFO  o.d.c.w.i.PlusWebInvokeTimeInterceptor - [PLUS]开始请求 => URL[GET /system/user/getInfo],无参数
+2024-09-09 18:16:46 [XNIO-1 task-3] INFO  o.d.c.w.i.PlusWebInvokeTimeInterceptor - [PLUS]结束请求 => URL[GET /system/user/getInfo],耗时:[217]毫秒
+2024-09-09 18:16:46 [XNIO-1 task-3] INFO  o.d.c.w.i.PlusWebInvokeTimeInterceptor - [PLUS]开始请求 => URL[GET /system/menu/getRouters],无参数
+2024-09-09 18:16:46 [XNIO-1 task-3] INFO  o.d.c.w.i.PlusWebInvokeTimeInterceptor - [PLUS]结束请求 => URL[GET /system/menu/getRouters],耗时:[38]毫秒
+2024-09-09 18:16:46 [XNIO-1 task-5] INFO  o.d.c.w.i.PlusWebInvokeTimeInterceptor - [PLUS]开始请求 => URL[GET /auth/tenant/list],无参数
+2024-09-09 18:16:46 [XNIO-1 task-5] INFO  o.d.c.w.i.PlusWebInvokeTimeInterceptor - [PLUS]结束请求 => URL[GET /auth/tenant/list],耗时:[0]毫秒
+2024-09-09 18:16:47 [XNIO-1 task-2] INFO  o.d.c.w.i.PlusWebInvokeTimeInterceptor - [PLUS]开始请求 => URL[GET /system/mission/count],无参数
+2024-09-09 18:16:47 [XNIO-1 task-3] INFO  o.d.c.w.i.PlusWebInvokeTimeInterceptor - [PLUS]开始请求 => URL[GET /system/group/all],无参数
+2024-09-09 18:16:47 [XNIO-1 task-4] INFO  o.d.c.w.i.PlusWebInvokeTimeInterceptor - [PLUS]开始请求 => URL[POST /system/mission/missionAnalyse],参数类型[json],参数:[{"groupIds":[]}]
+2024-09-09 18:16:47 [XNIO-1 task-3] INFO  o.d.c.w.i.PlusWebInvokeTimeInterceptor - [PLUS]结束请求 => URL[GET /system/group/all],耗时:[42]毫秒
+2024-09-09 18:16:47 [XNIO-1 task-4] INFO  o.d.c.w.i.PlusWebInvokeTimeInterceptor - [PLUS]结束请求 => URL[POST /system/mission/missionAnalyse],耗时:[100]毫秒
+2024-09-09 18:16:47 [XNIO-1 task-2] INFO  o.d.c.w.i.PlusWebInvokeTimeInterceptor - [PLUS]结束请求 => URL[GET /system/mission/count],耗时:[131]毫秒
+2024-09-09 18:16:49 [schedule-pool-1] INFO  o.d.c.websocket.utils.WebSocketUtils -  WebSocket发送主题订阅消息topic:global:websocket session keys:[1] message:欢迎登录任务指令后台管理系统
+2024-09-09 18:16:49 [redisson-3-2] INFO  o.d.c.w.l.WebSocketTopicListener - WebSocket主题订阅收到消息session keys=[1] message=欢迎登录任务指令后台管理系统
+2024-09-09 18:17:12 [XNIO-1 task-2] INFO  o.d.c.w.i.PlusWebSocketInterceptor - 192.168.23.1:连接成功
+2024-09-09 18:17:12 [XNIO-1 task-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - [connect] sessionId: 95516e9c-1eba-a91d-8c5a-8b5dd6a04621,senderIp:192168231
+2024-09-09 18:17:21 [XNIO-1 task-2] INFO  o.d.c.w.i.PlusWebInvokeTimeInterceptor - [PLUS]开始请求 => URL[GET /voice/pcInfo/listApp],无参数
+2024-09-09 18:17:21 [XNIO-1 task-2] INFO  o.d.c.w.i.PlusWebInvokeTimeInterceptor - [PLUS]结束请求 => URL[GET /voice/pcInfo/listApp],耗时:[55]毫秒
+2024-09-09 18:17:24 [XNIO-1 task-2] INFO  o.d.c.w.i.PlusWebInvokeTimeInterceptor - [PLUS]开始请求 => URL[GET /voice/pcInfo/listApp],无参数
+2024-09-09 18:17:24 [XNIO-1 task-2] INFO  o.d.c.w.i.PlusWebInvokeTimeInterceptor - [PLUS]结束请求 => URL[GET /voice/pcInfo/listApp],耗时:[37]毫秒
+2024-09-09 18:17:26 [XNIO-1 task-2] INFO  o.d.c.w.i.PlusWebInvokeTimeInterceptor - [PLUS]开始请求 => URL[GET /voice/pcInfo/listApp],无参数
+2024-09-09 18:17:26 [XNIO-1 task-2] INFO  o.d.c.w.i.PlusWebInvokeTimeInterceptor - [PLUS]结束请求 => URL[GET /voice/pcInfo/listApp],耗时:[19]毫秒
+2024-09-09 18:17:27 [XNIO-1 task-2] INFO  o.d.c.w.i.PlusWebInvokeTimeInterceptor - [PLUS]开始请求 => URL[GET /voice/pcInfo/listApp],无参数
+2024-09-09 18:17:27 [XNIO-1 task-2] INFO  o.d.c.w.i.PlusWebInvokeTimeInterceptor - [PLUS]结束请求 => URL[GET /voice/pcInfo/listApp],耗时:[19]毫秒
+2024-09-09 18:17:29 [XNIO-1 task-2] INFO  o.d.c.w.i.PlusWebInvokeTimeInterceptor - [PLUS]开始请求 => URL[GET /voice/pcInfo/listApp],无参数
+2024-09-09 18:17:29 [XNIO-1 task-2] INFO  o.d.c.w.i.PlusWebInvokeTimeInterceptor - [PLUS]结束请求 => URL[GET /voice/pcInfo/listApp],耗时:[25]毫秒
+2024-09-09 18:17:30 [XNIO-1 task-2] INFO  o.d.c.w.i.PlusWebInvokeTimeInterceptor - [PLUS]开始请求 => URL[GET /voice/pcInfo/listApp],无参数
+2024-09-09 18:17:30 [XNIO-1 task-2] INFO  o.d.c.w.i.PlusWebInvokeTimeInterceptor - [PLUS]结束请求 => URL[GET /voice/pcInfo/listApp],耗时:[21]毫秒
+2024-09-09 18:17:33 [XNIO-1 task-2] INFO  o.d.c.w.i.PlusWebInvokeTimeInterceptor - [PLUS]开始请求 => URL[GET /voice/pcInfo/listApp],无参数
+2024-09-09 18:17:33 [XNIO-1 task-2] INFO  o.d.c.w.i.PlusWebInvokeTimeInterceptor - [PLUS]结束请求 => URL[GET /voice/pcInfo/listApp],耗时:[35]毫秒
+2024-09-09 18:17:43 [XNIO-1 task-2] INFO  o.d.c.w.i.PlusWebInvokeTimeInterceptor - [PLUS]开始请求 => URL[GET /voice/pcInfo/listApp],无参数
+2024-09-09 18:17:43 [XNIO-1 task-2] INFO  o.d.c.w.i.PlusWebInvokeTimeInterceptor - [PLUS]结束请求 => URL[GET /voice/pcInfo/listApp],耗时:[25]毫秒
+2024-09-09 18:17:47 [XNIO-1 task-2] INFO  o.d.c.w.i.PlusWebInvokeTimeInterceptor - [PLUS]开始请求 => URL[GET /voice/pcInfo/list],参数类型[param],参数:[{"pageSize":["10"],"pageNum":["1"]}]
+2024-09-09 18:17:47 [XNIO-1 task-2] INFO  o.d.c.w.i.PlusWebInvokeTimeInterceptor - [PLUS]结束请求 => URL[GET /voice/pcInfo/list],耗时:[155]毫秒
+2024-09-09 18:17:49 [XNIO-1 task-2] INFO  o.d.c.w.i.PlusWebSocketInterceptor - 172.28.80.1:连接成功
+2024-09-09 18:17:49 [XNIO-1 task-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - [connect] sessionId: 445874d5-8912-ea37-2589-ff6c5e253b0a,senderIp:17228801
+2024-09-09 18:17:53 [XNIO-1 task-2] INFO  o.d.c.w.i.PlusWebInvokeTimeInterceptor - [PLUS]开始请求 => URL[GET /voice/pcInfo/listApp],无参数
+2024-09-09 18:17:53 [XNIO-1 task-2] INFO  o.d.c.w.i.PlusWebInvokeTimeInterceptor - [PLUS]结束请求 => URL[GET /voice/pcInfo/listApp],耗时:[25]毫秒
+2024-09-09 18:17:55 [XNIO-1 task-2] INFO  o.d.c.w.i.PlusWebInvokeTimeInterceptor - [PLUS]开始请求 => URL[GET /voice/pcInfo/list],参数类型[param],参数:[{"pageSize":["10"],"pageNum":["1"]}]
+2024-09-09 18:17:55 [XNIO-1 task-2] INFO  o.d.c.w.i.PlusWebInvokeTimeInterceptor - [PLUS]结束请求 => URL[GET /voice/pcInfo/list],耗时:[52]毫秒
+2024-09-09 18:17:56 [XNIO-1 task-2] INFO  o.d.c.w.i.PlusWebInvokeTimeInterceptor - [PLUS]开始请求 => URL[GET /voice/pcInfo/list],参数类型[param],参数:[{"pageSize":["10"],"pageNum":["1"]}]
+2024-09-09 18:17:56 [XNIO-1 task-2] INFO  o.d.c.w.i.PlusWebInvokeTimeInterceptor - [PLUS]结束请求 => URL[GET /voice/pcInfo/list],耗时:[64]毫秒
+2024-09-09 18:17:58 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:17:59 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:17:59 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:17:59 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:17:59 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:00 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:00 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:00 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:00 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:00 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:00 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:00 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:00 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:00 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:00 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:00 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:00 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:01 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:01 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:01 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:01 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:01 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:01 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:01 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:01 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:01 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:01 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:01 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:02 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:02 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:02 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:02 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:02 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:02 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:02 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:02 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:02 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:02 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:02 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:02 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:03 [XNIO-1 task-2] INFO  o.d.c.w.i.PlusWebInvokeTimeInterceptor - [PLUS]开始请求 => URL[GET /voice/pcInfo/listApp],无参数
+2024-09-09 18:18:03 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:03 [XNIO-1 task-2] INFO  o.d.c.w.i.PlusWebInvokeTimeInterceptor - [PLUS]结束请求 => URL[GET /voice/pcInfo/listApp],耗时:[20]毫秒
+2024-09-09 18:18:03 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:03 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:03 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:03 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:03 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:03 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:03 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:03 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:03 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:03 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:03 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:04 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:04 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:04 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:04 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:04 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:04 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:04 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:04 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:04 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:04 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:04 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:04 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:05 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:05 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:05 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:05 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:05 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:05 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:05 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:05 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:05 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:05 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:05 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:06 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:06 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:06 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:06 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:06 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:06 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:06 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:06 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:06 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:06 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:06 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:06 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:07 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:07 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - send message to 17228801
+2024-09-09 18:18:10 [XNIO-1 I/O-2] INFO  o.d.c.w.handler.PlusWebSocketHandler - [disconnect] sessionId: 95516e9c-1eba-a91d-8c5a-8b5dd6a04621,senderIp:192168231
+2024-09-09 18:18:10 [XNIO-1 I/O-2] ERROR o.d.c.w.handler.PlusWebSocketHandler - [transport error] sessionId: 95516e9c-1eba-a91d-8c5a-8b5dd6a04621 , exception:你的主机中的软件中止了一个已建立的连接。
+2024-09-09 18:18:15 [XNIO-1 task-2] INFO  o.d.c.w.i.PlusWebInvokeTimeInterceptor - [PLUS]开始请求 => URL[GET /voice/pcInfo/listApp],无参数
+2024-09-09 18:18:15 [XNIO-1 task-2] INFO  o.d.c.w.i.PlusWebInvokeTimeInterceptor - [PLUS]结束请求 => URL[GET /voice/pcInfo/listApp],耗时:[30]毫秒
+2024-09-09 18:18:25 [XNIO-1 task-2] INFO  o.d.c.w.i.PlusWebInvokeTimeInterceptor - [PLUS]开始请求 => URL[GET /voice/pcInfo/listApp],无参数
+21323
+123123
+123
+666
+324568790-023
+
