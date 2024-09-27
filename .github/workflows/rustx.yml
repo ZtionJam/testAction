@@ -1,0 +1,26 @@
+name: Rust
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Install rustc
+      uses: actions-rs/toolchain@v1
+      with:
+        toolchain: stable
+        target: x86_64-win7-windows-msvc 
+        profile: minimal
+        override: true
+    - name: Build and test
+      run: |
+        cargo build --verbose
+        cargo test --verbose
